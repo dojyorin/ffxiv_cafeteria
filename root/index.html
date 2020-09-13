@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+        <script>
+            if(/trident\/|edge\//i.test(navigator.userAgent)){
+                alert("This page is not compatible with your web browser.");
+                document.execCommand("stop");
+            }
+        </script>
+
+        <link rel="icon" href="./static/favicon.ico">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@latest/dist/vuetify.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Kosugi+Maru">
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-router@latest/dist/vue-router.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vuex@latest/dist/vuex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vuetify@latest/dist/vuetify.min.js"></script>
+
+        <script src="./lib/http_get.js"></script>
+        <script src="./lib/vue_loader.js"></script>
+
+        <title>Application</title>
+    </head>
+
+    <body>
+        <vue id="vue"></vue>
+    </body>
+
+    <script type="module">
+        import vueRouter from "./app/router/router.mjs";
+        import vueStore from "./app/store/store.mjs";
+        import vuePlugins from "./app/plugins/plugins.mjs";
+
+        Vue.use(vuePlugins);
+
+        const vue = new Vue({
+            el: "#vue",
+
+            vuetify: new Vuetify(),
+            router: new VueRouter(vueRouter),
+            store: new Vuex.Store(vueStore),
+
+            components: {
+                "vue": ()=> $vueLoader("./app/templates/default.vue")
+            }
+        });
+    </script>
+
+    <style>
+        ::-webkit-scrollbar{
+            display: none !important;
+        }
+        .v-application{
+            font-family: "M PLUS Rounded 1c", "Kosugi Maru" !important;
+        }
+        .v-btn{
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            text-indent: 0 !important;
+        }
+    </style>
+</html>
