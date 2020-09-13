@@ -1,7 +1,7 @@
 [{
     "name": "Bar Berry",
-    "icon": "./static/dc/mana/bar_berry/FwpacYKZ.jpg",
-    "thumbnail": "./static/dc/mana/bar_berry/FwpacYKZ.jpg",
+    "icon": "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
+    "thumbnail": "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
     "world": "Belias",
     "address": "ゴブレットビュート 11-7",
     "twitter": "https://twitter.com/search?f=tweets&q=%23Berry_7_KS",
@@ -9,7 +9,6 @@
     "owner": "Myu You",
     "id": 18441037,
     "contact": "",
-    "description": "当サイトの記念すべき第1号モデル店は開業4年の老舗。思いやりの接客が特徴の心温まる場所だ。",
     "comment": "心やすまるお店であればと思っています。来て頂いた方にあったかい気持ちになってほしいです。",
     "open": [{
         "time": "21:00-25:00",
@@ -35,7 +34,6 @@
     "owner": "Nepia Nepi",
     "id": 28523873,
     "contact": "",
-    "description": "",
     "comment": "",
     "open": [{
         "time": "",

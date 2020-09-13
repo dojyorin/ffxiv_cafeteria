@@ -17,7 +17,7 @@
         <v-row dense>
             <template v-for="(cafe, i) in $store.getters['cafes/getCafes']($route.params.dc)">
                 <v-col cols sm="6" md="3" :key="i">
-                    <v-card color="rgba(230, 230, 230, 0.8)">
+                    <v-card>
                         <v-img height="250" :src="cafe.thumbnail"></v-img>
                         <v-card-title>
                             <v-avatar size="32">
@@ -79,7 +79,6 @@ return {
                 owner: "",
                 id: 0,
                 contact: "",
-                description: "",
                 comment: "",
                 open: [],
                 galleries: []
@@ -101,36 +100,17 @@ return {
             this.dialog.owner = ctx.owner;
             this.dialog.id = ctx.id;
             this.dialog.contact = ctx.contact;
-            this.dialog.description = ctx.description;
             this.dialog.comment = ctx.comment;
 
+            this.dialog.open.splice(0);
             for(const day of ctx.open){
                 this.dialog.open.push(day);
             }
 
+            this.dialog.galleries.splice(0);
             for(const picture of ctx.galleries){
                 this.dialog.galleries.push(picture);
             }
-        },
-
-        closeDialog(){
-            this.dialog.view = false;
-
-            this.dialog.name = "";
-            this.dialog.icon = "";
-            this.dialog.thumbnail = "";
-            this.dialog.world = "";
-            this.dialog.address = "";
-            this.dialog.twitter = "";
-            this.dialog.beginner = false;
-            this.dialog.owner = "";
-            this.dialog.id = 0;
-            this.dialog.contact = "";
-            this.dialog.description = "";
-            this.dialog.comment = "";
-
-            this.dialog.open.splice(0);
-            this.dialog.galleries.splice(0);
         }
     }
 };
