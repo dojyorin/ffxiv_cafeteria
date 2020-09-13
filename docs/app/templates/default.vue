@@ -21,7 +21,7 @@
         <vue-drawer :style="`padding-top:${$vuetify.application.top}px!important;`" :contents="pages"></vue-drawer>
 
         <template #append>
-            <v-btn text tile block href="https://github.com/dojyorin/ff14_cafeteria" target="_blank" rel="noopener">
+            <v-btn text tile block href="https://github.com/dojyorin/ffxiv_cafeteria" target="_blank" rel="noopener">
                 <v-icon left>mdi-github</v-icon>
                 <span>GitHub</span>
             </v-btn>
