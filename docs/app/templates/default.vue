@@ -36,6 +36,10 @@
         </template>
     </v-navigation-drawer>
 
+    <vue-notify color="error" value>
+        現在、画面のスクロールが出来ない不具合を確認しております。調査中のため対応まで今しばらくお待ちください。
+    </vue-notify>
+
     <v-main>
         <v-carousel continuous cycle mandatory :height="$vuetify.breakpoint.height - $vuetify.application.top" touchless hide-delimiters hide-delimiter-background :interval="10000" :show-arrows="false">
             <template v-for="(photo, i) in photos">
@@ -60,7 +64,8 @@
 return {
     components: {
         "vue-header": ()=> $vueLoader("./app/components/layouts/header.vue"),
-        "vue-drawer": ()=> $vueLoader("./app/components/layouts/drawer.vue")
+        "vue-drawer": ()=> $vueLoader("./app/components/layouts/drawer.vue"),
+        "vue-notify": ()=> $vueLoader("./app/components/windows/notify.vue")
     },
 
     data(){
