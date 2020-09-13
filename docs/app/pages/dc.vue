@@ -1,18 +1,43 @@
 <template>
 <div>
-    <vue-dialog title="詳細" icon="mdi-home-analytics" color="blue" v-model="dialog.view">
+    <vue-dialog title="詳細情報" icon="mdi-home-analytics" color="blue" v-model="dialog.view">
         <v-container fluid>
             <v-row dense>
                 <v-col cols sm="12">
                     <v-card>
-                        <v-card-title>店舗情報</v-card-title>
-                        <v-card-text>{{dialog.world}}</v-card-text>
+                        <v-card-title>
+                            <v-avatar size="32">
+                                <v-img :src="dialog.icon"></v-img>
+                            </v-avatar>
+
+                            <span class="pl-4">{{dialog.name}}</span>
+                        </v-card-title>
+
+                        <v-card-text>
+                            オーナー: <a :href="`https://jp.finalfantasyxiv.com/lodestone/character/${dialog.id}`" target="_blank" rel="noopener">{{dialog.owner}}</a>
+                        </v-card-text>
+
+                        <v-card-text class="py-0 text-capitalize">データセンター: {{$route.params.dc}}</v-card-text>
+                        <v-card-text class="py-0">ワールド: {{dialog.world}}</v-card-text>
+                        <v-card-text class="pt-0">番地: {{dialog.address}}</v-card-text>
+
+                        <v-card-text class="py-0">
+                            Twitter: <a :href="dialog.twitter" target="_blank" rel="noopener">Link</a>
+                        </v-card-text>
+
+                        <v-card-text class="pt-0">お問い合わせ: {{dialog.contact || "-"}}</v-card-text>
+
+                        <v-card-text v-if="dialog.beginner" class="pt-0">駆け出し経営者: 優しく見守ってください!</v-card-text>
                     </v-card>
                 </v-col>
 
                 <v-col cols sm="12">
                     <v-card>
-                        <v-card-title>営業時間</v-card-title>
+                        <v-card-title>
+                            <v-icon>mdi-calendar</v-icon>
+                            <span class="pl-2">営業時間</span>
+                        </v-card-title>
+
                         <v-card-subtitle>当日のオーナー様のご都合によるため、あくまで目安となります。</v-card-subtitle>
                         <v-list>
                             <template v-for="(day, i) in dialog.opens">
@@ -26,6 +51,25 @@
                         </v-list>
                     </v-card>
                 </v-col>
+
+                <v-col cols sm="12">
+                    <v-card>
+                        <v-card-title>オーナー様よりひとこと</v-card-title>
+                        <v-card-text>{{dialog.comment || "-"}}</v-card-text>
+                    </v-card>
+                </v-col>
+
+                <v-col cols sm="12">
+                    <v-card>
+                        <v-card-title>ギャラリー</v-card-title>
+
+                        <v-carousel continuous mandatory height="400" :interval="-1">
+                            <template v-for="(gallery, i) in dialog.galleries">
+                                <v-carousel-item :key="i" :src="gallery" :href="gallery" target="_blank" rel="noopener"></v-carousel-item>
+                            </template>
+                        </v-carousel>
+                    </v-card>
+                </v-col>
             </v-row>
         </v-container>
     </vue-dialog>
@@ -35,13 +79,20 @@
             <template v-for="(cafe, i) in $store.getters['cafes/getCafes']($route.params.dc)">
                 <v-col cols sm="6" md="3" :key="i">
                     <v-card light>
-                        <v-img height="250" :src="cafe.thumbnail"></v-img>
+                        <v-img height="250" :src="cafe.thumbnail">
+                            <template #placeholder>
+                                <v-row justify="center" align="center" class="fill-height">
+                                    No Image...
+                                </v-row>
+                            </template>
+                        </v-img>
+
                         <v-card-title>
                             <v-avatar size="32">
                                 <v-img :src="cafe.icon"></v-img>
                             </v-avatar>
 
-                            <span class="pl-2">{{cafe.name}}</span>
+                            <span class="pl-4">{{cafe.name}}</span>
                         </v-card-title>
 
                         <v-card-subtitle>
@@ -88,7 +139,6 @@ return {
                 view: false,
                 name: "",
                 icon: "",
-                thumbnail: "",
                 world: "",
                 address: "",
                 twitter: "",
@@ -109,7 +159,6 @@ return {
 
             this.dialog.name = ctx.name;
             this.dialog.icon = ctx.icon;
-            this.dialog.thumbnail = ctx.thumbnail;
             this.dialog.world = ctx.world;
             this.dialog.address = ctx.address;
             this.dialog.twitter = ctx.twitter;

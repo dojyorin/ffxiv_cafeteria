@@ -37,7 +37,7 @@
     </v-navigation-drawer>
 
     <v-main>
-        <v-carousel continuous cycle mandatory :height="$vuetify.breakpoint.height - $vuetify.application.top" touchless hide-delimiters hide-delimiter-background :interval="10000" :show-arrows="false">
+        <v-carousel continuous cycle mandatory :height="$vuetify.breakpoint.height - $vuetify.application.top" touchless hide-delimiters hide-delimiter-background :interval="15000" :show-arrows="false">
             <template v-for="(photo, i) in photos">
                 <v-carousel-item :key="i" :src="$vuetify.breakpoint.xsOnly ? photo.sp : photo.pc" transition="fade-transition" reverse-transition="fade-transition">
                     <template v-if="$route.path === '/'">
@@ -83,6 +83,10 @@ return {
                 pc: "./static/cafes/mana/bar_berry/97G5TvGb.jpg",
                 sp: "./static/cafes/mana/bar_berry/aHgCtYUE.jpg",
                 offer: "Bar Berry"
+            }, {
+                pc: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
+                sp: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
+                offer: "胡蝶之夢"
             }]
         };
     },
