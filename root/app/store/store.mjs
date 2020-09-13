@@ -1,5 +1,5 @@
 import {namespaced, state, getters, mutations, actions} from "./index.mjs";
-import main from "./main.mjs";
+import cafes from "./cafes.mjs";
 
 export default {
     namespaced,
@@ -9,6 +9,6 @@ export default {
     actions,
 
     modules: {
-        main
+        cafes
     }
 };

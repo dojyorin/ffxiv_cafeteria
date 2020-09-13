@@ -1,1 +1,1 @@
-# Vue.js Web Application Template
+# FFXIV Cafeteria

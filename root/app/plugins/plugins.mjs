@@ -1,8 +1,6 @@
-import saveFile from "./save_file.mjs";
 import imageLoader from "./image_loader.mjs";
 
 const list = [
-    saveFile,
     imageLoader
 ];
 

@@ -1,19 +1,21 @@
 <template>
-<vue-menu system fix="r" color="purple" title="Notify" icon="mdi-bell-outline" :count="1">
-    <v-card>
-        <v-card-text>Contents</v-card-text>
-    </v-card>
-</vue-menu>
+<v-toolbar-items v-if="$vuetify.breakpoint.smAndUp">
+    <template v-for="(page, i) in contents">
+        <v-btn text class="override_button_fontsize" :key="i" :to="page.to">{{page.title}}</v-btn>
+    </template>
+</v-toolbar-items>
 </template>
 
 <script>
 return {
-    components: {
-        "vue-menu": ()=> $vueLoader("./app/components/windows/menu.vue")
-    },
-
     props: {
         contents: Array
     }
 };
 </script>
+
+<style scoped>
+.override_button_fontsize{
+    font-size: 1rem !important;
+}
+</style>

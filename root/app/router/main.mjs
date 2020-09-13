@@ -4,7 +4,10 @@ export const parents = {
 };
 
 export const routes = {
-    "/sub": "/sub.vue"
+    "/about": "/about.vue",
+    "/topics": "/topics.vue",
+    "/search": "/search.vue",
+    "/dc/:dc": "/dc.vue"
 };
 
 export default {
