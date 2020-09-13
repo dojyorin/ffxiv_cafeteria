@@ -10,7 +10,7 @@
     "id": 18441037,
     "contact": "",
     "comment": "心やすまるお店であればと思っています。来て頂いた方にあったかい気持ちになってほしいです。",
-    "open": [{
+    "opens": [{
         "time": "21:00-25:00",
         "dayofweek": "月曜日"
     }],
@@ -35,9 +35,6 @@
     "id": 28523873,
     "contact": "",
     "comment": "",
-    "open": [{
-        "time": "",
-        "dayofweek": ""
-    }],
+    "opens": [],
     "galleries": []
 }]

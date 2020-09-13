@@ -1,12 +1,29 @@
 <template>
 <div>
-    <vue-dialog title="詳細" icon="mdi-home-analytics" color="blue" width="500" v-model="dialog.view">
+    <vue-dialog title="詳細" icon="mdi-home-analytics" color="blue" v-model="dialog.view">
         <v-container fluid>
             <v-row dense>
                 <v-col cols sm="12">
                     <v-card>
                         <v-card-title>店舗情報</v-card-title>
                         <v-card-text>{{dialog.world}}</v-card-text>
+                    </v-card>
+                </v-col>
+
+                <v-col cols sm="12">
+                    <v-card>
+                        <v-card-title>営業時間</v-card-title>
+                        <v-card-subtitle>当日のオーナー様のご都合によるため、あくまで目安となります。</v-card-subtitle>
+                        <v-list>
+                            <template v-for="(day, i) in dialog.opens">
+                                <v-list-item :key="i">
+                                    <v-list-item-content>
+                                        <v-list-item-title>{{day.dayofweek}}</v-list-item-title>
+                                        <v-list-item-subtitle>{{day.time}}</v-list-item-subtitle>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </template>
+                        </v-list>
                     </v-card>
                 </v-col>
             </v-row>
@@ -80,7 +97,7 @@ return {
                 id: 0,
                 contact: "",
                 comment: "",
-                open: [],
+                opens: [],
                 galleries: []
             }
         };
@@ -102,9 +119,9 @@ return {
             this.dialog.contact = ctx.contact;
             this.dialog.comment = ctx.comment;
 
-            this.dialog.open.splice(0);
-            for(const day of ctx.open){
-                this.dialog.open.push(day);
+            this.dialog.opens.splice(0);
+            for(const day of ctx.opens){
+                this.dialog.opens.push(day);
             }
 
             this.dialog.galleries.splice(0);
