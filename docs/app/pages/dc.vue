@@ -34,7 +34,7 @@
         <v-row dense>
             <template v-for="(cafe, i) in $store.getters['cafes/getCafes']($route.params.dc)">
                 <v-col cols sm="6" md="3" :key="i">
-                    <v-card>
+                    <v-card light>
                         <v-img height="250" :src="cafe.thumbnail"></v-img>
                         <v-card-title>
                             <v-avatar size="32">
@@ -132,9 +132,3 @@ return {
     }
 };
 </script>
-
-<style scoped>
-.override_list_icon_margin{
-    margin: 12px 16px 0px 0px !important;
-}
-</style>
