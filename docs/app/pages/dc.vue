@@ -26,8 +26,6 @@
                         </v-card-text>
 
                         <v-card-text class="pt-0">お問い合わせ: {{dialog.contact || "-"}}</v-card-text>
-
-                        <v-card-text v-if="dialog.beginner" class="pt-0">駆け出し経営者: 優しく見守ってください!</v-card-text>
                     </v-card>
                 </v-col>
 
@@ -39,6 +37,9 @@
                         </v-card-title>
 
                         <v-card-subtitle>当日のオーナー様のご都合によるため、あくまで目安となります。</v-card-subtitle>
+
+                        <v-card-text v-if="!dialog.opens.length">(不定期)</v-card-text>
+
                         <v-list>
                             <template v-for="(day, i) in dialog.opens">
                                 <v-list-item :key="i">
@@ -111,8 +112,6 @@
                         </v-card-actions>
 
                         <v-card-actions>
-                            <v-icon v-if="cafe.beginner">mdi-clover</v-icon>
-
                             <v-spacer></v-spacer>
 
                             <v-btn icon :href="cafe.twitter" target="_blank" rel="noopener">
@@ -142,7 +141,6 @@ return {
                 world: "",
                 address: "",
                 twitter: "",
-                beginner: false,
                 owner: "",
                 id: 0,
                 contact: "",
@@ -162,7 +160,6 @@ return {
             this.dialog.world = ctx.world;
             this.dialog.address = ctx.address;
             this.dialog.twitter = ctx.twitter;
-            this.dialog.beginner = ctx.beginner;
             this.dialog.owner = ctx.owner;
             this.dialog.id = ctx.id;
             this.dialog.contact = ctx.contact;
