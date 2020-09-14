@@ -5,11 +5,11 @@
     "world": "Belias",
     "address": "ゴブレットビュート 11-7",
     "twitter": "https://twitter.com/search?f=tweets&q=%23Berry_7_KS",
-    "beginner": false,
     "owner": "Myu You",
     "id": 18441037,
     "contact": "",
     "comment": "心やすまるお店であればと思っています。来て頂いた方にあったかい気持ちになってほしいです。",
+    "branches": [],
     "opens": [{
         "time": "21:00-25:00",
         "dayofweek": "月曜日"
@@ -30,11 +30,11 @@
     "world": "Pandemonium",
     "address": "ゴブレットビュート 14-10",
     "twitter": "https://twitter.com/search?f=tweets&q=%23秋の黄昏",
-    "beginner": false,
     "owner": "Nepia Nepi",
     "id": 28523873,
     "contact": "",
     "comment": "",
+    "branches": [],
     "opens": [],
     "galleries": []
 }, {
@@ -44,11 +44,11 @@
     "world": "Ixion",
     "address": "ミストヴィレッジ 19-11",
     "twitter": "",
-    "beginner": false,
     "owner": "Mili Shtola",
     "id": 27178733,
     "contact": "",
     "comment": "",
+    "branches": [],
     "opens": [],
     "galleries": []
 }, {
@@ -58,15 +58,12 @@
     "world": "Shinryu",
     "address": "ラベンダーベッド リリーヒルズ 14-1-24",
     "twitter": "https://twitter.com/search?f=tweets&q=%23CryQ_FF14",
-    "beginner": false,
     "owner": "Luthi Ankh",
     "id": 24660882,
     "contact": "",
     "comment": "",
-    "opens": [{
-        "time": "",
-        "dayofweek": ""
-    }],
+    "branches": [],
+    "opens": [],
     "galleries": []
 }, {
     "name": "胡蝶之夢",
@@ -75,12 +72,15 @@
     "world": "Belias",
     "address": "ラベンダーベッド 5-16",
     "twitter": "https://twitter.com/butterfly_FF14",
-    "beginner": false,
     "owner": "Hazuki Kurogane",
     "id": 23426199,
     "contact": "",
     "comment": "疲れた日々にちょっとした休息を、ごゆっくりしていただければ幸いです。",
-    "opens": [],
+    "branches": [],
+    "opens": [{
+        "time": "23:00~",
+        "dayofweek": "日曜日"
+    }],
     "galleries": [
         "./static/cafes/mana/胡蝶之夢/1500x500.jpg",
         "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
