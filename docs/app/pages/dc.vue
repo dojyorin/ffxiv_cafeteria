@@ -38,12 +38,13 @@
                             <span class="pl-2">営業時間</span>
                         </v-card-title>
 
-                        <v-card-subtitle>当日のオーナー様のご都合によるため、あくまで目安となります。</v-card-subtitle>
+                        <v-card-subtitle class="pb-0">当日のオーナー様のご都合によるため、あくまで目安となります。</v-card-subtitle>
 
                         <v-card-text v-if="!dialog.opens.length">(不定期)</v-card-text>
 
-                        <v-list>
+                        <v-list class="mx-4">
                             <template v-for="(day, i) in dialog.opens">
+                                <v-divider v-if="i" :key="i"></v-divider>
                                 <v-list-item :key="i">
                                     <v-list-item-content>
                                         <v-list-item-title>{{day.dayofweek}}</v-list-item-title>
