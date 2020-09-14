@@ -5,7 +5,7 @@
             <v-card light>
                 <v-card-title class="pb-0">お知らせ</v-card-title>
 
-                <v-list>
+                <v-list class="mx-4">
                     <template v-for="(topic, i) in topics">
                         <v-divider v-if="i" :key="i"></v-divider>
                         <v-list-item :key="i">
@@ -24,7 +24,7 @@
             <v-card light>
                 <v-card-title class="pb-0">新着店舗情報</v-card-title>
 
-                <v-list>
+                <v-list class="mx-4">
                     <template v-for="(cafe, i) in cafes">
                         <v-divider v-if="i" :key="i"></v-divider>
                         <v-list-item :key="i">
@@ -55,7 +55,7 @@ return {
             this.topics.push(topic);
         }
 
-        this.topics.splice(20);
+        this.topics.splice(10);
 
         for(const dc of ["mana", "gaia", "elemental"]){
             for(const cafe of await $httpGet(`./data/cafes/${dc}.json`, "json")){
