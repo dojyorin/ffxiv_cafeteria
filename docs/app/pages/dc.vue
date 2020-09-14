@@ -26,6 +26,8 @@
                         </v-card-text>
 
                         <v-card-text class="pt-0">お問い合わせ: {{dialog.contact || "-"}}</v-card-text>
+
+                        <v-card-text class="pt-0">登録日: {{$unixDate(dialog.regist)}}</v-card-text>
                     </v-card>
                 </v-col>
 
@@ -143,8 +145,10 @@ return {
                 twitter: "",
                 owner: "",
                 id: 0,
+                regist: 0,
                 contact: "",
                 comment: "",
+                branches: [],
                 opens: [],
                 galleries: []
             }
@@ -162,8 +166,14 @@ return {
             this.dialog.twitter = ctx.twitter;
             this.dialog.owner = ctx.owner;
             this.dialog.id = ctx.id;
+            this.dialog.regist = ctx.regist;
             this.dialog.contact = ctx.contact;
             this.dialog.comment = ctx.comment;
+
+            this.dialog.branches.splice(0);
+            for(const branch of ctx.branches){
+                this.dialog.branches.push(branch);
+            }
 
             this.dialog.opens.splice(0);
             for(const day of ctx.opens){

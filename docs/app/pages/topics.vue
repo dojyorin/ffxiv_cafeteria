@@ -1,17 +1,36 @@
 <template>
 <v-container fluid>
     <v-row dense>
-        <v-col cols sm="12">
+        <v-col cols sm="12" md="6">
             <v-card light>
                 <v-card-title class="pb-0">お知らせ</v-card-title>
 
                 <v-list>
-                    <template v-for="(news, i) in newses">
+                    <template v-for="(topic, i) in topics">
+                        <v-divider v-if="i" :key="i"></v-divider>
                         <v-list-item :key="i">
                             <v-list-item-content>
-                                <v-list-item-subtitle>{{news.date}}</v-list-item-subtitle>
-                                <v-list-item-title class="override_title_nowrap">{{news.title}}</v-list-item-title>
-                                <v-list-item-subtitle class="override_title_nowrap">{{news.description}}</v-list-item-subtitle>
+                                <v-list-item-subtitle>{{topic.date}}</v-list-item-subtitle>
+                                <v-list-item-title class="override_title_nowrap">{{topic.title}}</v-list-item-title>
+                                <v-list-item-subtitle class="override_title_nowrap">{{topic.description}}</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </template>
+                </v-list>
+            </v-card>
+        </v-col>
+
+        <v-col cols sm="12" md="6">
+            <v-card light>
+                <v-card-title class="pb-0">新着店舗情報</v-card-title>
+
+                <v-list>
+                    <template v-for="(cafe, i) in cafes">
+                        <v-divider v-if="i" :key="i"></v-divider>
+                        <v-list-item :key="i">
+                            <v-list-item-content>
+                                <v-list-item-subtitle>{{$unixDate(cafe.regist)}}</v-list-item-subtitle>
+                                <v-list-item-title class="override_title_nowrap">{{cafe.name}}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
                     </template>
@@ -26,14 +45,25 @@
 return {
     data(){
         return {
-            newses: []
+            topics: [],
+            cafes: []
         };
     },
 
     async mounted(){
-        for(const news of await $httpGet("./data/topics/topics.json", "json")){
-            this.newses.push(news);
+        for(const topic of await $httpGet("./data/topics/topics.json", "json")){
+            this.topics.push(topic);
         }
+
+        this.topics.splice(20);
+
+        for(const dc of ["mana", "gaia", "elemental"]){
+            for(const cafe of await $httpGet(`./data/cafes/${dc}.json`, "json")){
+                this.cafes.push(cafe);
+            }
+        }
+
+        this.cafes.sort((a, b)=> a.regist - b.regist).splice(20);
     }
 }
 </script>

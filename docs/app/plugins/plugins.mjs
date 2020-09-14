@@ -1,7 +1,7 @@
-import imageLoader from "./image_loader.mjs";
+import unixDate from "./unix_date.mjs";
 
 const list = [
-    imageLoader
+    unixDate
 ];
 
 const plugins = {
