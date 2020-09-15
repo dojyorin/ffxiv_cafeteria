@@ -83,14 +83,21 @@
 
                 <v-col cols sm="12">
                     <v-card>
-                        <v-card-title>オーナー様よりひとこと</v-card-title>
+                        <v-card-title>
+                            <v-icon>mdi-comment-account-outline</v-icon>
+                            <span class="pl-2">オーナー様より</span>
+                        </v-card-title>
+
                         <v-card-text>{{dialog.comment || "-"}}</v-card-text>
                     </v-card>
                 </v-col>
 
                 <v-col cols sm="12">
                     <v-card>
-                        <v-card-title>ギャラリー</v-card-title>
+                        <v-card-title>
+                            <v-icon>mdi-image-multiple-outline</v-icon>
+                            <span class="pl-2">ギャラリー</span>
+                        </v-card-title>
 
                         <v-carousel continuous mandatory height="400" :interval="-1">
                             <template v-for="(gallery, i) in dialog.galleries">
