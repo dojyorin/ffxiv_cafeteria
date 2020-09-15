@@ -10,7 +10,7 @@
                         <v-divider v-if="i" :key="i"></v-divider>
                         <v-list-item :key="i">
                             <v-list-item-content>
-                                <v-list-item-subtitle>{{topic.date}}</v-list-item-subtitle>
+                                <v-list-item-subtitle>{{$unixDate(topic.date)}}</v-list-item-subtitle>
                                 <v-list-item-title class="override_title_noellipsis">{{topic.title}}</v-list-item-title>
                                 <v-list-item-subtitle class="override_title_noellipsis">{{topic.description}}</v-list-item-subtitle>
                             </v-list-item-content>
