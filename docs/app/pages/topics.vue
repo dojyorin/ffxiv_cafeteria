@@ -30,7 +30,8 @@
                         <v-list-item :key="i">
                             <v-list-item-content>
                                 <v-list-item-subtitle>{{$unixDate(cafe.regist)}}</v-list-item-subtitle>
-                                <v-list-item-title class="override_title_noellipsis">{{cafe.name}}</v-list-item-title>
+                                <v-list-item-title>{{cafe.name}}</v-list-item-title>
+                                <v-list-item-subtitle>{{cafe.datacenter}} - {{cafe.world}}</v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
                     </template>
@@ -57,13 +58,11 @@ return {
 
         this.topics.splice(10);
 
-        for(const dc of ["mana", "gaia", "elemental"]){
-            for(const cafe of await $httpGet(`./data/cafes/${dc}.json`, "json")){
-                this.cafes.push(cafe);
-            }
+        for(const cafe of await $httpGet("./data/cafes/cafes.json", "json")){
+            this.cafes.push(cafe);
         }
 
-        this.cafes.sort((a, b)=> a.regist - b.regist).splice(20);
+        this.cafes.sort(({regist:aRegist}, {regist:bRegist})=> aRegist - bRegist).splice(10);
     }
 }
 </script>

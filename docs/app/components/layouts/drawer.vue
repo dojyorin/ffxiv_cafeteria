@@ -48,13 +48,13 @@ return {
         return {
             pages: [{
                 title: "Mana",
-                to: "/dc/mana"
+                to: "/cafes/mana"
             }, {
                 title: "Gaia",
-                to: "/dc/gaia"
+                to: "/cafes/gaia"
             }, {
                 title: "Elemental",
-                to: "/dc/elemental"
+                to: "/cafes/elemental"
             }]
         };
     }

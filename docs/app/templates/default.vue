@@ -43,7 +43,7 @@
 
         <template v-else>
             <v-img src="./static/background.jpg" :height="$vuetify.breakpoint.height - $vuetify.application.top">
-                <div class="fill-height background_blur_image">
+                <div class="fill-height bg_blur_image">
                     <router-view></router-view>
                 </div>
             </v-img>
@@ -81,8 +81,8 @@ return {
 </script>
 
 <style scoped>
-.background_blur_image{
-    backdrop-filter: blur(8px) !important;
+.bg_blur_image{
+    backdrop-filter: blur(10px) !important;
     overflow-y: scroll !important;
 }
 </style>

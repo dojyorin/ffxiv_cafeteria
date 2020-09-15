@@ -17,7 +17,7 @@
                             オーナー: <a :href="`https://jp.finalfantasyxiv.com/lodestone/character/${dialog.id}`" target="_blank" rel="noopener">{{dialog.owner}}</a>
                         </v-card-text>
 
-                        <v-card-text class="py-0 text-capitalize">データセンター: {{$route.params.dc}}</v-card-text>
+                        <v-card-text class="py-0">データセンター: {{dialog.datacenter}}</v-card-text>
                         <v-card-text class="py-0">ワールド: {{dialog.world}}</v-card-text>
                         <v-card-text class="pt-0">番地: {{dialog.address}}</v-card-text>
 
@@ -45,8 +45,10 @@
                                 <v-divider v-if="i" :key="i"></v-divider>
                                 <v-list-item :key="i">
                                     <v-list-item-content>
-                                        <v-list-item-title>ワールド: {{branch.world}}</v-list-item-title>
-                                        <v-list-item-subtitle>データセンター: {{branch.dc}}</v-list-item-subtitle>
+                                        <v-list-item-title>{{branch.name}} 支店</v-list-item-title>
+                                        <v-list-item-subtitle>データセンター: {{branch.datacenter}}</v-list-item-subtitle>
+                                        <v-list-item-subtitle>ワールド: {{branch.world}}</v-list-item-subtitle>
+                                        <v-list-item-subtitle>番地: {{branch.address}}</v-list-item-subtitle>
                                     </v-list-item-content>
                                 </v-list-item>
                             </template>
@@ -165,6 +167,7 @@ return {
                 view: false,
                 name: "",
                 icon: "",
+                datacenter: "",
                 world: "",
                 address: "",
                 hashtag: "",
@@ -183,7 +186,8 @@ return {
     methods: {
         async setCafes(dc){
             this.cafes.splice(0);
-            for(const cafe of await $httpGet(`./data/cafes/${dc}.json`, "json")){
+
+            for(const cafe of (await $httpGet("./data/cafes/cafes.json", "json")).filter(({datacenter})=> datacenter.toLowerCase() === dc)){
                 this.cafes.push(cafe);
             }
         },
@@ -193,6 +197,7 @@ return {
 
             this.dialog.name = ctx.name;
             this.dialog.icon = ctx.icon;
+            this.dialog.datacenter = ctx.datacenter;
             this.dialog.world = ctx.world;
             this.dialog.address = ctx.address;
             this.dialog.hashtag = ctx.hashtag;
@@ -220,11 +225,11 @@ return {
     },
 
     mounted(){
-        this.setCafes(this.$route.params.dc);
+        this.setCafes(this.$route.params.datacenter);
     },
 
     watch: {
-        ["$route.params.dc"](dc){
+        ["$route.params.datacenter"](dc){
             this.setCafes(dc);
         }
     }
