@@ -37,21 +37,17 @@
     </v-navigation-drawer>
 
     <v-main>
-        <v-carousel continuous cycle mandatory :height="$vuetify.breakpoint.height - $vuetify.application.top" touchless hide-delimiters hide-delimiter-background :interval="15000" :show-arrows="false">
-            <template v-for="(photo, i) in photos">
-                <v-carousel-item :key="i" :src="$vuetify.breakpoint.xsOnly ? photo.sp : photo.pc" transition="fade-transition" reverse-transition="fade-transition">
-                    <template v-if="$route.path === '/'">
-                        <router-view :offer="photo.offer"></router-view>
-                    </template>
+        <template v-if="$route.path === '/'">
+            <router-view></router-view>
+        </template>
 
-                    <template v-else>
-                        <div class="fill-height common_blur_image">
-                            <router-view></router-view>
-                        </div>
-                    </template>
-                </v-carousel-item>
-            </template>
-        </v-carousel>
+        <template v-else>
+            <v-img src="./static/background.jpg" :height="$vuetify.breakpoint.height - $vuetify.application.top">
+                <div class="fill-height background_blur_image">
+                    <router-view></router-view>
+                </div>
+            </v-img>
+        </template>
     </v-main>
 </v-app>
 </template>
@@ -78,28 +74,15 @@ return {
                 title: "Search",
                 to: "/search",
                 icon: "mdi-map-search-outline"
-            }],
-            photos: [{
-                pc: "./static/cafes/mana/bar_berry/97G5TvGb.jpg",
-                sp: "./static/cafes/mana/bar_berry/aHgCtYUE.jpg",
-                offer: "Bar Berry"
-            }, {
-                pc: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
-                sp: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
-                offer: "胡蝶之夢"
             }]
         };
-    },
-
-    async mounted(){
-        await this.$store.dispatch("cafes/getCafes");
     }
 }
 </script>
 
 <style scoped>
-.common_blur_image{
-    backdrop-filter: blur(10px) !important;
+.background_blur_image{
+    backdrop-filter: blur(8px) !important;
     overflow-y: scroll !important;
 }
 </style>

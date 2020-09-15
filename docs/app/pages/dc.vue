@@ -22,12 +22,35 @@
                         <v-card-text class="pt-0">番地: {{dialog.address}}</v-card-text>
 
                         <v-card-text class="py-0">
-                            Twitter: <a :href="dialog.twitter" target="_blank" rel="noopener">Link</a>
+                            <span>ハッシュタグ: </span>
+                            <a v-if="dialog.hashtag" :href="`https://twitter.com/search?f=tweets&q=%23${dialog.hashtag}`" target="_blank" rel="noopener">#{{dialog.hashtag}}</a>
+                            <span v-else>-</span>
                         </v-card-text>
 
                         <v-card-text class="pt-0">お問い合わせ: {{dialog.contact || "-"}}</v-card-text>
 
                         <v-card-text class="pt-0">登録日: {{$unixDate(dialog.regist)}}</v-card-text>
+                    </v-card>
+                </v-col>
+
+                <v-col v-if="dialog.branches.length" cols sm="12">
+                    <v-card>
+                        <v-card-title>
+                            <v-icon>mdi-home-group</v-icon>
+                            <span class="pl-2">支店情報</span>
+                        </v-card-title>
+
+                        <v-list class="mx-4">
+                            <template v-for="(branch, i) in dialog.branches">
+                                <v-divider v-if="i" :key="i"></v-divider>
+                                <v-list-item :key="i">
+                                    <v-list-item-content>
+                                        <v-list-item-title>ワールド: {{branch.world}}</v-list-item-title>
+                                        <v-list-item-subtitle>データセンター: {{branch.dc}}</v-list-item-subtitle>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </template>
+                        </v-list>
                     </v-card>
                 </v-col>
 
@@ -40,7 +63,7 @@
 
                         <v-card-subtitle class="pb-0">当日のオーナー様のご都合によるため、あくまで目安となります。</v-card-subtitle>
 
-                        <v-card-text v-if="!dialog.opens.length">(不定期)</v-card-text>
+                        <v-card-text v-if="!dialog.opens.length" class="pt-4">(不定期)</v-card-text>
 
                         <v-list class="mx-4">
                             <template v-for="(day, i) in dialog.opens">
@@ -80,7 +103,7 @@
 
     <v-container fluid>
         <v-row dense>
-            <template v-for="(cafe, i) in $store.getters['cafes/getCafes']($route.params.dc)">
+            <template v-for="(cafe, i) in cafes">
                 <v-col cols sm="6" md="3" :key="i">
                     <v-card light>
                         <v-img height="250" :src="cafe.thumbnail">
@@ -117,7 +140,7 @@
                         <v-card-actions>
                             <v-spacer></v-spacer>
 
-                            <v-btn icon :href="cafe.twitter" target="_blank" rel="noopener">
+                            <v-btn icon :href="`https://twitter.com/search?f=tweets&q=%23${cafe.hashtag}`" target="_blank" rel="noopener">
                                 <v-icon>mdi-twitter</v-icon>
                             </v-btn>
                         </v-card-actions>
@@ -137,13 +160,14 @@ return {
 
     data(){
         return {
+            cafes: [],
             dialog: {
                 view: false,
                 name: "",
                 icon: "",
                 world: "",
                 address: "",
-                twitter: "",
+                hashtag: "",
                 owner: "",
                 id: 0,
                 regist: 0,
@@ -157,6 +181,13 @@ return {
     },
 
     methods: {
+        async setCafes(dc){
+            this.cafes.splice(0);
+            for(const cafe of await $httpGet(`./data/cafes/${dc}.json`, "json")){
+                this.cafes.push(cafe);
+            }
+        },
+
         openDialog(ctx){
             this.dialog.view = true;
 
@@ -164,7 +195,7 @@ return {
             this.dialog.icon = ctx.icon;
             this.dialog.world = ctx.world;
             this.dialog.address = ctx.address;
-            this.dialog.twitter = ctx.twitter;
+            this.dialog.hashtag = ctx.hashtag;
             this.dialog.owner = ctx.owner;
             this.dialog.id = ctx.id;
             this.dialog.regist = ctx.regist;
@@ -185,6 +216,16 @@ return {
             for(const picture of ctx.galleries){
                 this.dialog.galleries.push(picture);
             }
+        }
+    },
+
+    mounted(){
+        this.setCafes(this.$route.params.dc);
+    },
+
+    watch: {
+        ["$route.params.dc"](dc){
+            this.setCafes(dc);
         }
     }
 };
