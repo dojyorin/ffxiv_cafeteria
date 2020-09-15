@@ -30,8 +30,8 @@
                         <v-list-item :key="i">
                             <v-list-item-content>
                                 <v-list-item-subtitle>{{$unixDate(cafe.regist)}}</v-list-item-subtitle>
-                                <v-list-item-title>{{cafe.name}}</v-list-item-title>
-                                <v-list-item-subtitle>{{cafe.datacenter}} - {{cafe.world}}</v-list-item-subtitle>
+                                <v-list-item-title class="override_title_noellipsis">{{cafe.name}}</v-list-item-title>
+                                <v-list-item-subtitle class="override_title_noellipsis">{{cafe.datacenter}} - {{cafe.world}}</v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
                     </template>

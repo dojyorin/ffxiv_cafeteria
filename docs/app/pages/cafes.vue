@@ -106,8 +106,8 @@
     <v-container fluid>
         <v-row dense>
             <template v-for="(cafe, i) in cafes">
-                <v-col cols sm="6" md="3" :key="i">
-                    <v-card light>
+                <v-col cols sm="6" md="4" :key="i">
+                    <v-card>
                         <v-img height="250" :src="cafe.thumbnail">
                             <template #placeholder>
                                 <v-row justify="center" align="center" class="fill-height">

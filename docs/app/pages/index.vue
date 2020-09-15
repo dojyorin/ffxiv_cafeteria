@@ -1,5 +1,5 @@
 <template>
-<v-carousel continuous cycle mandatory touchless hide-delimiters hide-delimiter-background :height="$vuetify.breakpoint.height - $vuetify.application.top" :interval="15000" :show-arrows="false">
+<v-carousel continuous cycle mandatory touchless hide-delimiters hide-delimiter-background :height="$vuetify.breakpoint.height - $vuetify.application.top" :interval="7500" :show-arrows="false">
     <template v-for="(photo, i) in photos">
         <v-carousel-item :key="i" :src="$vuetify.breakpoint.xsOnly ? photo.sp : photo.pc" transition="fade-transition" reverse-transition="fade-transition">
             <v-row justify="end" align-content="end" class="fill-height">

@@ -2,7 +2,7 @@
 <v-container fluid>
     <v-row dense>
         <v-col cols sm="12">
-            <v-card light>
+            <v-card>
                 <v-card-title>このウェブサイトについて</v-card-title>
 
                 <v-card-text>
@@ -16,7 +16,7 @@
         </v-col>
 
         <v-col cols sm="12">
-            <v-card light>
+            <v-card>
                 <v-card-title>掲載許可について</v-card-title>
 
                 <v-card-text>
@@ -30,7 +30,7 @@
         </v-col>
 
         <v-col cols sm="12">
-            <v-card light>
+            <v-card>
                 <v-card-title>共同開発者募集</v-card-title>
 
                 <v-card-text>
