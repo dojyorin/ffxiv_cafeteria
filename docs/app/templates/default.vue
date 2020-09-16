@@ -21,11 +21,6 @@
         <vue-drawer :style="`padding-top:${$vuetify.application.top}px!important;`" :contents="pages"></vue-drawer>
 
         <template #append>
-            <v-btn text tile block href="https://github.com/dojyorin/ffxiv_cafeteria" target="_blank" rel="noopener">
-                <v-icon left>mdi-github</v-icon>
-                <span>GitHub</span>
-            </v-btn>
-
             <v-card flat tile color="transparent">
                 <v-card-text class="pa-1">
                     Copyright (C) SQUARE ENIX CO., LTD.

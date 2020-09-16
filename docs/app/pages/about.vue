@@ -38,6 +38,57 @@
                 </v-card-text>
             </v-card>
         </v-col>
+
+        <v-col cols sm="12">
+            <v-card>
+                <v-card-title>お問い合わせ</v-card-title>
+
+                <v-card-text>
+                    掲載依頼やバグ報告などの各種お問い合わせは、以下のいずれかもしくはゲーム内チャットにてお願い致します。
+                </v-card-text>
+
+                <v-list class="mx-4">
+                    <template v-for="(contact, i) in contacts">
+                        <v-divider v-if="i" :key="i"></v-divider>
+                        <v-list-item :key="i" :href="contact.href" target="_blank" rel="noopener">
+                            <v-list-item-icon class="mr-6">
+                                <v-icon>{{contact.icon}}</v-icon>
+                            </v-list-item-icon>
+
+                            <v-list-item-content>
+                                <v-list-item-title>{{contact.service}}</v-list-item-title>
+                                <v-list-item-subtitle>{{contact.account}}</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </template>
+                </v-list>
+            </v-card>
+        </v-col>
     </v-row>
 </v-container>
 </template>
+
+<script>
+return {
+    data(){
+        return {
+            contacts: [{
+                service: "GitHub",
+                account: "dojyorin/ffxiv_cafeteria",
+                href: "https://github.com/dojyorin/ffxiv_cafeteria",
+                icon: "mdi-github"
+            }, {
+                service: "Twitter",
+                account: "@dojyorin",
+                href: "https://twitter.com/dojyorin",
+                icon: "mdi-twitter"
+            }, {
+                service: "Lodestone",
+                account: "Raycharles Halwen",
+                href: "https://jp.finalfantasyxiv.com/lodestone/character/?q=Raycharles+Halwen&gcid=3&blog_lang=ja",
+                icon: "mdi-gamepad-square-outline"
+            }]
+        };
+    }
+}
+</script>
