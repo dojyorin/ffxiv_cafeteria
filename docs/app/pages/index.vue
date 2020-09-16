@@ -24,6 +24,10 @@ return {
                 pc: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
                 sp: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
                 offer: "胡蝶之夢"
+            }, {
+                pc: "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
+                sp: "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
+                offer: "WhiteHorse"
             }]
         };
     }
