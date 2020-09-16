@@ -97,4 +97,27 @@
         "./static/cafes/mana/胡蝶之夢/EhzmwvhUcAAbfPK.jpg",
         "./static/cafes/mana/胡蝶之夢/g1b1EmMO_400x400.jpg"
     ]
+}, {
+    "name": "WhiteHorse",
+    "icon": "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg",
+    "thumbnail": "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg",
+    "datacenter": "Mana",
+    "world": "Pandemonium",
+    "address": "ミストヴィレッジ 20-20",
+    "hashtag": "FF14_WhiteHouse",
+    "owner": "High Ton",
+    "id": 23803382,
+    "regist": 1600233390,
+    "contact": "@haruberu1",
+    "comment": "まったりくつろげるをコンセプトに、季節やオーナーの気分によって内装が変わります。時々で変わる内装と、店長との気さくなトークをお楽しみください！",
+    "branches": [],
+    "opens": [{
+        "time":"27:00 - ??:??",
+        "dayofweek": "不定期"
+    }],
+    "galleries": [
+        "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
+        "./static/cafes/mana/WhiteHorse/nxMyhWqk.jpg",
+        "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg"
+    ]
 }]

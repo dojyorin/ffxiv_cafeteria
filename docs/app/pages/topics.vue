@@ -62,7 +62,7 @@ return {
             this.cafes.push(cafe);
         }
 
-        this.cafes.sort(({regist:aRegist}, {regist:bRegist})=> aRegist - bRegist).splice(10);
+        this.cafes.sort(({regist:aRegist}, {regist:bRegist})=> bRegist - aRegist).splice(10);
     }
 }
 </script>
