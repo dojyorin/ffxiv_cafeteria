@@ -84,7 +84,7 @@
     "owner": "Hazuki Kurogane",
     "id": 23426199,
     "regist": 1600043373,
-    "contact": "@butterfly_FF14",
+    "contact": "Twitter@butterfly_FF14",
     "comment": "疲れた日々にちょっとした休息を、ごゆっくりしていただければ幸いです。",
     "branches": [],
     "opens": [{
@@ -108,7 +108,7 @@
     "owner": "High Ton",
     "id": 23803382,
     "regist": 1600233390,
-    "contact": "@haruberu1",
+    "contact": "Twitter@haruberu1",
     "comment": "まったりくつろげるをコンセプトに、季節やオーナーの気分によって内装が変わります。時々で変わる内装と、店長との気さくなトークをお楽しみください！",
     "branches": [],
     "opens": [{
@@ -119,5 +119,31 @@
         "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
         "./static/cafes/mana/WhiteHorse/nxMyhWqk.jpg",
         "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg"
+    ]
+}, {
+    "name": "カフェ・HOA",
+    "icon": "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
+    "thumbnail": "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
+    "datacenter": "Elemental",
+    "world": "Garuda",
+    "address": "ゴブレットビュート 20-8",
+    "hashtag": "カフェHOA",
+    "owner": "Rui-zu Musica",
+    "id": 18078324,
+    "regist": 1600302910,
+    "contact": "Twitter@Ruizu39",
+    "comment": "カフェ・HOAです。二階にカフェステージ、地下にライブステージを有する、演奏家と音楽好きの為のカフェです。ゲリラライブや人前での練習など、どうぞお気軽にお使い下さい。演奏会の会場としての貸し出しも承っております。(詳しくは上記連絡先またはゲーム内まで)",
+    "branches": [],
+    "opens": [{
+        "time": "23:00 - ??:??",
+        "dayofweek": "月曜日"
+    }],
+    "galleries": [
+        "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
+        "./static/cafes/elemental/カフェ・HOA/qe-gg0HT.jpg",
+        "./static/cafes/elemental/カフェ・HOA/P1D-4CiM.jpg",
+        "./static/cafes/elemental/カフェ・HOA/lKJlsTAV.jpg",
+        "./static/cafes/elemental/カフェ・HOA/CWwsa4lJ.jpg",
+        "./static/cafes/elemental/カフェ・HOA/3x6AV3bT.jpg"
     ]
 }]
