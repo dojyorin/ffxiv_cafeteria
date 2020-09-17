@@ -1,4 +1,5 @@
 [{
+    "id": 1,
     "name": "Bar Berry",
     "icon": "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
     "thumbnail": "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
@@ -7,7 +8,7 @@
     "address": "ゴブレットビュート 11-7",
     "hashtag": "Berry_7_KS",
     "owner": "Myu You",
-    "id": 18441037,
+    "character": 18441037,
     "regist": 1600043373,
     "contact": "",
     "comment": "心やすまるお店であればと思っています。来て頂いた方にあったかい気持ちになってほしいです。",
@@ -26,6 +27,7 @@
         "./static/cafes/mana/bar_berry/vNPKXKHO.jpg"
     ]
 }, {
+    "id": 2,
     "name": "秋の黄昏",
     "icon": "",
     "thumbnail": "",
@@ -34,7 +36,7 @@
     "address": "ゴブレットビュート 14-10",
     "hashtag": "秋の黄昏",
     "owner": "Nepia Nepi",
-    "id": 28523873,
+    "character": 28523873,
     "regist": 1600043373,
     "contact": "",
     "comment": "",
@@ -42,6 +44,7 @@
     "opens": [],
     "galleries": []
 }, {
+    "id": 3,
     "name": "Cafe Vunchii",
     "icon": "",
     "thumbnail": "",
@@ -50,7 +53,7 @@
     "address": "ミストヴィレッジ 19-11",
     "hashtag": "",
     "owner": "Mili Shtola",
-    "id": 27178733,
+    "character": 27178733,
     "regist": 1600043373,
     "contact": "",
     "comment": "",
@@ -58,6 +61,7 @@
     "opens": [],
     "galleries": []
 }, {
+    "id": 4,
     "name": "Crystal Quartz",
     "icon": "",
     "thumbnail": "",
@@ -66,7 +70,7 @@
     "address": "ラベンダーベッド リリーヒルズ 14-1-24",
     "hashtag": "CryQ_FF14",
     "owner": "Luthi Ankh",
-    "id": 24660882,
+    "character": 24660882,
     "regist": 1600043373,
     "contact": "",
     "comment": "",
@@ -74,6 +78,7 @@
     "opens": [],
     "galleries": []
 }, {
+    "id": 5,
     "name": "胡蝶之夢",
     "icon": "./static/cafes/mana/胡蝶之夢/g1b1EmMO_400x400.jpg",
     "thumbnail": "./static/cafes/mana/胡蝶之夢/1500x500.jpg",
@@ -82,7 +87,7 @@
     "address": "ラベンダーベッド 5-16",
     "hashtag": "胡蝶之夢_FF14",
     "owner": "Hazuki Kurogane",
-    "id": 23426199,
+    "character": 23426199,
     "regist": 1600043373,
     "contact": "Twitter@butterfly_FF14",
     "comment": "疲れた日々にちょっとした休息を、ごゆっくりしていただければ幸いです。",
@@ -98,6 +103,7 @@
         "./static/cafes/mana/胡蝶之夢/g1b1EmMO_400x400.jpg"
     ]
 }, {
+    "id": 6,
     "name": "WhiteHorse",
     "icon": "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg",
     "thumbnail": "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg",
@@ -106,7 +112,7 @@
     "address": "ミストヴィレッジ 20-20",
     "hashtag": "WhiteHorse",
     "owner": "High Ton",
-    "id": 23803382,
+    "character": 23803382,
     "regist": 1600233390,
     "contact": "Twitter@haruberu1",
     "comment": "まったりくつろげるをコンセプトに、季節やオーナーの気分によって内装が変わります。時々で変わる内装と、店長との気さくなトークをお楽しみください！",
@@ -121,6 +127,7 @@
         "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg"
     ]
 }, {
+    "id": 7,
     "name": "カフェ・HOA",
     "icon": "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
     "thumbnail": "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
@@ -129,7 +136,7 @@
     "address": "ゴブレットビュート 20-8",
     "hashtag": "カフェHOA",
     "owner": "Rui-zu Musica",
-    "id": 18078324,
+    "character": 18078324,
     "regist": 1600302910,
     "contact": "Twitter@Ruizu39",
     "comment": "カフェ・HOAです。二階にカフェステージ、地下にライブステージを有する、演奏家と音楽好きの為のカフェです。ゲリラライブや人前での練習など、どうぞお気軽にお使い下さい。演奏会の会場としての貸し出しも承っております。(詳しくは上記連絡先またはゲーム内まで)",

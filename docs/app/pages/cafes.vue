@@ -14,7 +14,7 @@
                         </v-card-title>
 
                         <v-card-text>
-                            オーナー: <a :href="`https://jp.finalfantasyxiv.com/lodestone/character/${dialog.id}`" target="_blank" rel="noopener">{{dialog.owner}}</a>
+                            オーナー: <a :href="`https://jp.finalfantasyxiv.com/lodestone/character/${dialog.character}`" target="_blank" rel="noopener">{{dialog.owner}}</a>
                         </v-card-text>
 
                         <v-card-text class="py-0">データセンター: {{dialog.datacenter}}</v-card-text>
@@ -29,6 +29,7 @@
 
                         <v-card-text class="pt-0">お問い合わせ: {{dialog.contact || "-"}}</v-card-text>
 
+                        <v-card-text class="py-0">ID: {{dialog.id}}</v-card-text>
                         <v-card-text class="pt-0">登録日: {{$$unixDate(dialog.regist)}}</v-card-text>
                     </v-card>
                 </v-col>
@@ -172,6 +173,7 @@ return {
             cafes: [],
             dialog: {
                 view: false,
+                id: 0,
                 name: "",
                 icon: "",
                 datacenter: "",
@@ -179,7 +181,7 @@ return {
                 address: "",
                 hashtag: "",
                 owner: "",
-                id: 0,
+                character: 0,
                 regist: 0,
                 contact: "",
                 comment: "",
@@ -202,6 +204,7 @@ return {
         openDialog(ctx){
             this.dialog.view = true;
 
+            this.dialog.id = ctx.id;
             this.dialog.name = ctx.name;
             this.dialog.icon = ctx.icon;
             this.dialog.datacenter = ctx.datacenter;
@@ -209,7 +212,7 @@ return {
             this.dialog.address = ctx.address;
             this.dialog.hashtag = ctx.hashtag;
             this.dialog.owner = ctx.owner;
-            this.dialog.id = ctx.id;
+            this.dialog.character = ctx.character;
             this.dialog.regist = ctx.regist;
             this.dialog.contact = ctx.contact;
             this.dialog.comment = ctx.comment;
@@ -235,10 +238,9 @@ return {
         this.setCafes(this.$route.params.datacenter);
     },
 
-    watch: {
-        ["$route.params.datacenter"](dc){
-            this.setCafes(dc);
-        }
+    beforeRouteUpdate({params}, _, next){
+        this.setCafes(params.datacenter);
+        next();
     }
 };
 </script>
