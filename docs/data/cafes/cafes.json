@@ -41,7 +41,10 @@
     "contact": "",
     "comment": "",
     "branches": [],
-    "opens": [],
+    "opens": [{
+        "time": "??:?? - ??:??",
+        "dayofweek": "不定期"
+    }],
     "galleries": []
 }, {
     "id": 3,
@@ -58,7 +61,10 @@
     "contact": "",
     "comment": "",
     "branches": [],
-    "opens": [],
+    "opens": [{
+        "time": "??:?? - ??:??",
+        "dayofweek": "不定期"
+    }],
     "galleries": []
 }, {
     "id": 4,
@@ -75,7 +81,10 @@
     "contact": "",
     "comment": "",
     "branches": [],
-    "opens": [],
+    "opens": [{
+        "time": "??:?? - ??:??",
+        "dayofweek": "不定期"
+    }],
     "galleries": []
 }, {
     "id": 5,

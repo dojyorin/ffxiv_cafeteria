@@ -27,7 +27,7 @@
                 <v-list class="mx-4">
                     <template v-for="(cafe, i) in cafes">
                         <v-divider v-if="i" :key="i"></v-divider>
-                        <v-list-item :key="i">
+                        <v-list-item :key="i" :to="`/cafe/${cafe.id}`">
                             <v-list-item-content>
                                 <v-list-item-subtitle>{{$$unixDate(cafe.regist)}}</v-list-item-subtitle>
                                 <v-list-item-title class="override_title_noellipsis">{{cafe.name}}</v-list-item-title>
@@ -56,7 +56,7 @@ return {
             this.topics.push(topic);
         }
 
-        this.topics.splice(10);
+        this.topics.sort(({date:aRegist}, {date:bRegist})=> bRegist - aRegist).splice(10);
 
         for(const cafe of await $httpGet("./data/cafes/cafes.json", "json")){
             this.cafes.push(cafe);
