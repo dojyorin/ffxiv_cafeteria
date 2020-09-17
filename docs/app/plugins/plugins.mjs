@@ -4,12 +4,12 @@ const list = [
     unixDate
 ];
 
-const plugins = {
-    install(Vue){
-        for(const plugin of list){
-            Vue.prototype[`$${plugin.name}`] = plugin;
-        }
+function install(ctx){
+    for(const plugin of list){
+        ctx.prototype[`$$${plugin.name}`] = plugin;
     }
-};
+}
 
-export default plugins;
+export default {
+    install
+};

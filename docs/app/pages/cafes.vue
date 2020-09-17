@@ -29,7 +29,7 @@
 
                         <v-card-text class="pt-0">お問い合わせ: {{dialog.contact || "-"}}</v-card-text>
 
-                        <v-card-text class="pt-0">登録日: {{$unixDate(dialog.regist)}}</v-card-text>
+                        <v-card-text class="pt-0">登録日: {{$$unixDate(dialog.regist)}}</v-card-text>
                     </v-card>
                 </v-col>
 
