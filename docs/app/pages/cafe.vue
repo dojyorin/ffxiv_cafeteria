@@ -131,7 +131,7 @@ return {
 
     methods: {
         async setCafe(ctx){
-            const cafe = (await $httpGet("./data/cafes/cafes.json", "json")).find(({id})=> id === Number(ctx));
+            const cafe = (await $httpGet("./data/cafes.json", "json")).find(({id})=> id === Number(ctx));
 
             this.id = cafe.id;
             this.name = cafe.name;

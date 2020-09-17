@@ -25,8 +25,7 @@ return {
     methods: {
         async setCafes(ctx){
             this.cafes.splice(0);
-
-            for(const cafe of (await $httpGet("./data/cafes/cafes.json", "json")).filter(({datacenter})=> datacenter.toLowerCase() === ctx)){
+            for(const cafe of (await $httpGet("./data/cafes.json", "json")).filter(({datacenter})=> datacenter.toLowerCase() === ctx)){
                 this.cafes.push(cafe);
             }
         }

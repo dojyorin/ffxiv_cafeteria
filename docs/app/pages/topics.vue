@@ -52,13 +52,13 @@ return {
     },
 
     async mounted(){
-        for(const topic of await $httpGet("./data/topics/topics.json", "json")){
+        for(const topic of await $httpGet("./data/topics.json", "json")){
             this.topics.push(topic);
         }
 
         this.topics.sort(({date:aRegist}, {date:bRegist})=> bRegist - aRegist).splice(10);
 
-        for(const cafe of await $httpGet("./data/cafes/cafes.json", "json")){
+        for(const cafe of await $httpGet("./data/cafes.json", "json")){
             this.cafes.push(cafe);
         }
 
