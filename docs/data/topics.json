@@ -9,5 +9,9 @@
 }, {
     "date": 1600326888,
     "title": "店舗別URLに対応しました",
-    "description": "/cafe/id"
+    "description": "/cafe/:idでアクセスできます"
+}, {
+    "date": 1600342986,
+    "title": "検索機能を追加しました",
+    "description": "ベータ版"
 }]
