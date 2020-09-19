@@ -6,7 +6,7 @@
                 <v-card-title>検索</v-card-title>
 
                 <v-card-text>
-                    <v-text-field clearable prepend-icon="mdi-database-search" label="検索ワード" @keydown.enter="({target})=> $router.push(`/search?words=${target.value}`)"></v-text-field>
+                    <v-text-field clearable type="search" prepend-icon="mdi-database-search" label="検索ワード" @keydown.enter="({target})=> $router.push(`/search?words=${target.value}`)"></v-text-field>
                 </v-card-text>
             </v-card>
         </v-col>
