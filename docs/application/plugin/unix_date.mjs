@@ -1,4 +1,4 @@
-export function unixDate(time){
+export default function unixDate(time){
     function pad(number){
         return String(number).padStart(2, "0");
     }
@@ -6,5 +6,3 @@ export function unixDate(time){
     const date = new Date(time * 1000);
     return `${date.getFullYear()}/${pad(date.getMonth() + 1)}/${pad(date.getDate())}`;
 }
-
-export default unixDate;

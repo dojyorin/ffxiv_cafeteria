@@ -13,7 +13,7 @@
 <script>
 return {
     components: {
-        "vue-thumbnail": ()=> $vueLoader("./app/components/cards/thumbnail.vue")
+        "vue-thumbnail": ()=> $vueLoader("./application/components/cards/thumbnail.vue")
     },
 
     data(){
