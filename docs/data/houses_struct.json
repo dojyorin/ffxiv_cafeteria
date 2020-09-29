@@ -1,0 +1,28 @@
+{
+    "id": 0,
+    "name": "",
+    "type": "",
+    "icon": "./static/id//.jpg",
+    "thumbnail": "./static/id//.jpg",
+    "datacenter": "",
+    "world": "",
+    "address": "",
+    "hashtag": "",
+    "owner": "",
+    "character": 0,
+    "regist": 0,
+    "contact": "",
+    "comment": "",
+    "branches": [{
+        "datacenter": "",
+        "world": "",
+        "address": ""
+    }],
+    "opens": [{
+        "time": "",
+        "dayofweek": ""
+    }],
+    "galleries": [
+        "./static/id//.jpg"
+    ]
+}
