@@ -1,8 +1,9 @@
 [{
     "id": 1,
+    "type": "バー",
     "name": "Bar Berry",
-    "icon": "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
-    "thumbnail": "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
+    "icon": "./static/id/1/Rwgq6URu.jpg",
+    "thumbnail": "./static/id/1/Rwgq6URu.jpg",
     "datacenter": "Mana",
     "world": "Belias",
     "address": "ゴブレットビュート 11-7",
@@ -18,17 +19,18 @@
         "dayofweek": "月曜日"
     }],
     "galleries": [
-        "./static/cafes/mana/bar_berry/97G5TvGb.jpg",
-        "./static/cafes/mana/bar_berry/aHgCtYUE.jpg",
-        "./static/cafes/mana/bar_berry/FwpacYKZ.jpg",
-        "./static/cafes/mana/bar_berry/p5qdYJwF.jpg",
-        "./static/cafes/mana/bar_berry/qNLmhWCD.jpg",
-        "./static/cafes/mana/bar_berry/U6M5O0XB.jpg",
-        "./static/cafes/mana/bar_berry/vNPKXKHO.jpg"
+        "./static/id/1/CTVbi5a7.jpg",
+        "./static/id/1/9l0939pt.jpg",
+        "./static/id/1/Rwgq6URu.jpg",
+        "./static/id/1/ANr8q0CL.jpg",
+        "./static/id/1/IKV3RV1M.jpg",
+        "./static/id/1/mvuSY8Mp.jpg",
+        "./static/id/1/qDgWRNwj.jpg"
     ]
 }, {
     "id": 2,
     "name": "秋の黄昏",
+    "type": "カフェ",
     "icon": "",
     "thumbnail": "",
     "datacenter": "Mana",
@@ -49,6 +51,7 @@
 }, {
     "id": 3,
     "name": "Cafe Vunchii",
+    "type": "カフェ",
     "icon": "",
     "thumbnail": "",
     "datacenter": "Mana",
@@ -69,6 +72,7 @@
 }, {
     "id": 4,
     "name": "Crystal Quartz",
+    "type": "バー",
     "icon": "",
     "thumbnail": "",
     "datacenter": "Mana",
@@ -89,8 +93,9 @@
 }, {
     "id": 5,
     "name": "胡蝶之夢",
-    "icon": "./static/cafes/mana/胡蝶之夢/g1b1EmMO_400x400.jpg",
-    "thumbnail": "./static/cafes/mana/胡蝶之夢/1500x500.jpg",
+    "type": "カフェ",
+    "icon": "./static/id/5/v8PzBIP2.jpg",
+    "thumbnail": "./static/id/5/Nm60bFZy.jpg",
     "datacenter": "Mana",
     "world": "Belias",
     "address": "ラベンダーベッド 5-16",
@@ -106,16 +111,17 @@
         "dayofweek": "日曜日"
     }],
     "galleries": [
-        "./static/cafes/mana/胡蝶之夢/1500x500.jpg",
-        "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
-        "./static/cafes/mana/胡蝶之夢/EhzmwvhUcAAbfPK.jpg",
-        "./static/cafes/mana/胡蝶之夢/g1b1EmMO_400x400.jpg"
+        "./static/id/5/Nm60bFZy.jpg",
+        "./static/id/5/T1EjO8bS.jpg",
+        "./static/id/5/ouZ1SxQW.jpg",
+        "./static/id/5/v8PzBIP2.jpg"
     ]
 }, {
     "id": 6,
     "name": "WhiteHorse",
-    "icon": "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg",
-    "thumbnail": "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg",
+    "type": "バー",
+    "icon": "./static/id/6/8ARjmzmG.jpg",
+    "thumbnail": "./static/id/6/8ARjmzmG.jpg",
     "datacenter": "Mana",
     "world": "Pandemonium",
     "address": "ミストヴィレッジ 20-20",
@@ -131,15 +137,16 @@
         "dayofweek": "不定期"
     }],
     "galleries": [
-        "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
-        "./static/cafes/mana/WhiteHorse/nxMyhWqk.jpg",
-        "./static/cafes/mana/WhiteHorse/tmjKQvu8.jpg"
+        "./static/id/6/3YdVKKOm.jpg",
+        "./static/id/6/1DHRlRja.jpg",
+        "./static/id/6/8ARjmzmG.jpg"
     ]
 }, {
     "id": 7,
     "name": "カフェ・HOA",
-    "icon": "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
-    "thumbnail": "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
+    "type": "カフェ",
+    "icon": "./static/id/7/6n8oL1PH.jpg",
+    "thumbnail": "./static/id/7/6n8oL1PH.jpg",
     "datacenter": "Elemental",
     "world": "Garuda",
     "address": "ゴブレットビュート 20-8",
@@ -155,11 +162,11 @@
         "dayofweek": "月曜日"
     }],
     "galleries": [
-        "./static/cafes/elemental/カフェ・HOA/4uuj_6r9.jpg",
-        "./static/cafes/elemental/カフェ・HOA/qe-gg0HT.jpg",
-        "./static/cafes/elemental/カフェ・HOA/P1D-4CiM.jpg",
-        "./static/cafes/elemental/カフェ・HOA/lKJlsTAV.jpg",
-        "./static/cafes/elemental/カフェ・HOA/CWwsa4lJ.jpg",
-        "./static/cafes/elemental/カフェ・HOA/3x6AV3bT.jpg"
+        "./static/id/7/6n8oL1PH.jpg",
+        "./static/id/7/UphRgbnY.jpg",
+        "./static/id/7/cY5yoJpH.jpg",
+        "./static/id/7/rM6g81b8.jpg",
+        "./static/id/7/MRVAbnFf.jpg",
+        "./static/id/7/e2AGA0z9.jpg"
     ]
 }]

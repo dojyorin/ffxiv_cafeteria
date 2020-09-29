@@ -19,6 +19,8 @@
                 <v-card-text class="py-0">ワールド: {{world}}</v-card-text>
                 <v-card-text class="pt-0">番地: {{address}}</v-card-text>
 
+                <v-card-text class="pt-0">タイプ: {{type}}</v-card-text>
+
                 <v-card-text class="py-0">
                     <span>ハッシュタグ: </span>
                     <a v-if="hashtag" :href="`https://twitter.com/search?f=tweets&q=%23${hashtag}`" target="_blank" rel="noopener">#{{hashtag}}</a>
@@ -113,6 +115,7 @@ return {
         return {
             id: 0,
             name: "",
+            type: "",
             icon: "",
             datacenter: "",
             world: "",
@@ -130,45 +133,46 @@ return {
     },
 
     methods: {
-        async setCafe(ctx){
-            const cafe = (await $httpGet("./data/cafes.json", "json")).find(({id})=> id === Number(ctx));
+        async setHouse(ctx){
+            const house = (await $httpGet("./data/houses.json", "json")).find(({id})=> id === Number(ctx));
 
-            this.id = cafe.id;
-            this.name = cafe.name;
-            this.icon = cafe.icon;
-            this.datacenter = cafe.datacenter;
-            this.world = cafe.world;
-            this.address = cafe.address;
-            this.hashtag = cafe.hashtag;
-            this.owner = cafe.owner;
-            this.character = cafe.character;
-            this.regist = cafe.regist;
-            this.contact = cafe.contact;
-            this.comment = cafe.comment;
+            this.id = house.id;
+            this.name = house.name;
+            this.type = house.type;
+            this.icon = house.icon;
+            this.datacenter = house.datacenter;
+            this.world = house.world;
+            this.address = house.address;
+            this.hashtag = house.hashtag;
+            this.owner = house.owner;
+            this.character = house.character;
+            this.regist = house.regist;
+            this.contact = house.contact;
+            this.comment = house.comment;
 
             this.branches.splice(0);
-            for(const branch of cafe.branches){
+            for(const branch of house.branches){
                 this.branches.push(branch);
             }
 
             this.opens.splice(0);
-            for(const day of cafe.opens){
+            for(const day of house.opens){
                 this.opens.push(day);
             }
 
             this.galleries.splice(0);
-            for(const picture of cafe.galleries){
+            for(const picture of house.galleries){
                 this.galleries.push(picture);
             }
         }
     },
 
     mounted(){
-        this.setCafe(this.$route.params.id);
+        this.setHouse(this.$route.params.id);
     },
 
     beforeRouteUpdate({params}, _, next){
-        this.setCafe(params.id);
+        this.setHouse(params.id);
         next();
     }
 };

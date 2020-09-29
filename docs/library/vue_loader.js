@@ -31,9 +31,7 @@
             let templateScoped = "";
             let styleScoped = "";
 
-            const isScoped = /^<style\s.*?scoped/i.test(style);
-
-            if(isScoped){
+            if(/^<style\s.*?scoped/i.test(style)){
                 const random = crypto.getRandomValues(new Uint8Array(4));
                 const scope = `data-v-${Array.from(random).map(byte => byte.toString(16)).join("")}`;
 
@@ -49,7 +47,7 @@
 
             return {
                 template: templateScoped || templateBody,
-                mixins: [new Function(scriptBody)() || {}]
+                extends: new Function(scriptBody)() || {}
             };
         }
     });

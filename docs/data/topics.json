@@ -1,17 +1,17 @@
 [{
     "date": 1600043373,
     "title": "ウェブサイトをオープンしました",
-    "description": "テストトライアル版"
+    "description": "ベータ版"
 }, {
     "date": 1600256295,
     "title": "お問い合わせ先を追加しました",
-    "description": "Aboutページ内"
+    "description": ""
 }, {
     "date": 1600326888,
     "title": "店舗別URLに対応しました",
-    "description": "/cafe/:idでアクセスできます"
+    "description": ""
 }, {
     "date": 1600342986,
     "title": "検索機能を追加しました",
-    "description": "ベータ版"
+    "description": ""
 }]

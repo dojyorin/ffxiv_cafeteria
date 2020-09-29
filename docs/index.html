@@ -6,7 +6,7 @@
 
         <script>
             if(/trident\/|edge\//i.test(navigator.userAgent)){
-                alert("This page is not compatible with your web browser.");
+                alert("お使いのウェブブラウザには対応しておりません");
                 document.execCommand("stop");
             }
         </script>
@@ -22,8 +22,8 @@
         <script src="https://cdn.jsdelivr.net/npm/vuex@latest/dist/vuex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vuetify@latest/dist/vuetify.min.js"></script>
 
-        <script src="./lib/http_get.js"></script>
-        <script src="./lib/vue_loader.js"></script>
+        <script src="./library/http_get.js"></script>
+        <script src="./library/vue_loader.js"></script>
 
         <title>FFXIV Cafeteria</title>
     </head>
@@ -33,11 +33,11 @@
     </body>
 
     <script type="module">
-        import vueRouter from "./app/router/router.mjs";
-        import vueStore from "./app/store/store.mjs";
-        import vuePlugins from "./app/plugins/plugins.mjs";
+        import vuePlugin from "./application/plugin/plugin.mjs";
+        import vueRouter from "./application/router/router.mjs";
+        import vueStore from "./application/store/store.mjs";
 
-        Vue.use(vuePlugins);
+        Vue.use(vuePlugin);
 
         const vue = new Vue({
             el: "#vue",
@@ -47,7 +47,7 @@
             store: new Vuex.Store(vueStore),
 
             components: {
-                "vue": ()=> $vueLoader("./app/templates/default.vue")
+                "vue": ()=> $vueLoader("./application/templates/default.vue")
             }
         });
     </script>

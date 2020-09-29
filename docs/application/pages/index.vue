@@ -17,16 +17,16 @@ return {
     data(){
         return {
             photos: [{
-                pc: "./static/cafes/mana/bar_berry/97G5TvGb.jpg",
-                sp: "./static/cafes/mana/bar_berry/aHgCtYUE.jpg",
+                pc: "./static/id/1/Rwgq6URu.jpg",
+                sp: "./static/id/1/9l0939pt.jpg",
                 offer: "Bar Berry"
             }, {
-                pc: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
-                sp: "./static/cafes/mana/胡蝶之夢/EdU4NKjVAAEao5Z.jpg",
+                pc: "./static/id/5/T1EjO8bS.jpg",
+                sp: "./static/id/5/T1EjO8bS.jpg",
                 offer: "胡蝶之夢"
             }, {
-                pc: "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
-                sp: "./static/cafes/mana/WhiteHorse/JWxQZgQS.jpg",
+                pc: "./static/id/6/8ARjmzmG.jpg",
+                sp: "./static/id/6/8ARjmzmG.jpg",
                 offer: "WhiteHorse"
             }]
         };
