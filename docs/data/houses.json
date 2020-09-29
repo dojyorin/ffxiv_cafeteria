@@ -196,4 +196,164 @@
         "./static/id/8/Nk6ITIzg.jpg",
         "./static/id/8/w6xlyLMN.jpg"
     ]
+}, {
+    "id": 9,
+    "name": "Cre'puscule",
+    "type": "スタジオ",
+    "icon": "./static/id/9/Ux9nJIJ6.jpg",
+    "thumbnail": "./static/id/9/Ux9nJIJ6.jpg",
+    "datacenter": "Mana",
+    "world": "Pandaemonium",
+    "address": "ラベンダーベッド 12-31",
+    "hashtag": "空間スタジオ",
+    "owner": "Ruinen Fuchs",
+    "character": 19295598,
+    "regist": 1601389892,
+    "contact": "Twitter@Ruinen_F",
+    "comment": "生活空間兼スタジオ ... 最寄りエーテライトは『拡張南』または『拡張樹冠商店街』をご利用下さい。",
+    "branches": [],
+    "opens": [{
+        "time": "00:00 - 24:00",
+        "dayofweek": "終日"
+    }],
+    "galleries": [
+        "./static/id/9/acg91TDN.jpg",
+        "./static/id/9/bKiRFyf0.jpg",
+        "./static/id/9/et7R6Qlj.jpg",
+        "./static/id/9/G5oiUOLJ.jpg",
+        "./static/id/9/h1xwBlKr.jpg",
+        "./static/id/9/lnZVgkjQ.jpg",
+        "./static/id/9/T412pSRl.jpg",
+        "./static/id/9/Ux9nJIJ6.jpg"
+    ]
+}, {
+    "id": 10,
+    "name": "E'ternelle",
+    "type": "スタジオ",
+    "icon": "./static/id/10/u8OXxgzp.jpg",
+    "thumbnail": "./static/id/10/u8OXxgzp.jpg",
+    "datacenter": "Mana",
+    "world": "Pandaemonium",
+    "address": "ゴブレットビュート 12-21",
+    "hashtag": "空間スタジオ",
+    "owner": "Ruinen Fuchs",
+    "character": 19295598,
+    "regist": 1601389892,
+    "contact": "Twitter@Ruinen_F",
+    "comment": "待合空間兼スタジオ ... 最寄りエーテライトは『北東』をご利用下さい。開放日等はフェローシップ『空間スタジオ』にて告知しております。",
+    "branches": [],
+    "opens": [{
+        "time": "??:?? - ??:??",
+        "dayofweek": "不定期"
+    }],
+    "galleries": [
+        "./static/id/10/2Khna3wp.jpg",
+        "./static/id/10/B4OatNc6.jpg",
+        "./static/id/10/Ka43f6Uq.jpg",
+        "./static/id/10/u8OXxgzp.jpg"
+    ]
+}, {
+    "id": 11,
+    "name": "Coupable",
+    "type": "スタジオ",
+    "icon": "./static/id/11/752KYYXP.jpg",
+    "thumbnail": "./static/id/11/752KYYXP.jpg",
+    "datacenter": "Mana",
+    "world": "Pandaemonium",
+    "address": "ゴブレットビュート 12-21 (個室)",
+    "hashtag": "空間スタジオ",
+    "owner": "Ruinen Fuchs",
+    "character": 19295598,
+    "regist": 1601389892,
+    "contact": "Twitter@Ruinen_F",
+    "comment": "罪喰い部屋 ... 最寄りエーテライトは『北東』をご利用下さい。開放日等はフェローシップ『空間スタジオ』にて告知しております。",
+    "branches": [],
+    "opens": [{
+        "time": "??:?? - ??:??",
+        "dayofweek": "不定期"
+    }],
+    "galleries": [
+        "./static/id/11/430SxPKJ.jpg",
+        "./static/id/11/752KYYXP.jpg",
+        "./static/id/11/jqAx4HVh.jpg",
+        "./static/id/11/TrqjKfcR.jpg"
+    ]
+}, {
+    "id": 12,
+    "name": "E'clipse",
+    "type": "スタジオ",
+    "icon": "./static/id/12/umxl8aCE.jpg",
+    "thumbnail": "./static/id/12/umxl8aCE.jpg",
+    "datacenter": "Mana",
+    "world": "Pandaemonium",
+    "address": "ゴブレットビュート 12-21 (個室)",
+    "hashtag": "空間スタジオ",
+    "owner": "Ruinen Fuchs",
+    "character": 19295598,
+    "regist": 1601389892,
+    "contact": "Twitter@Ruinen_F",
+    "comment": "漆黒部屋 ... 最寄りエーテライトは『北東』をご利用下さい。開放日等はフェローシップ『空間スタジオ』にて告知しております。",
+    "branches": [],
+    "opens": [{
+        "time": "??:?? - ??:??",
+        "dayofweek": "不定期"
+    }],
+    "galleries": [
+        "./static/id/12/qeSrpweB.jpg",
+        "./static/id/12/umxl8aCE.jpg",
+        "./static/id/12/vRoUfFuR.jpg",
+        "./static/id/12/ysHLWyJY.jpg"
+    ]
+}, {
+    "id": 13,
+    "name": "Destruction",
+    "type": "スタジオ",
+    "icon": "./static/id/13/5Gc8vog5.jpg",
+    "thumbnail": "./static/id/13/5Gc8vog5.jpg",
+    "datacenter": "Mana",
+    "world": "Pandaemonium",
+    "address": "ミストヴィレッジ",
+    "hashtag": "空間スタジオ",
+    "owner": "Ruinen Fuchs",
+    "character": 19295598,
+    "regist": 1601389892,
+    "contact": "Twitter@Ruinen_F",
+    "comment": "隠処空間兼スタジオ ... 見付けた方だけのお楽しみ空間の為、所在は伏せさせて頂きます。Twitterにヒントあり。",
+    "branches": [],
+    "opens": [{
+        "time": "00:00 - 24:00",
+        "dayofweek": "終日"
+    }],
+    "galleries": [
+        "./static/id/13/5Gc8vog5.jpg",
+        "./static/id/13/fLhHCh2X.jpg",
+        "./static/id/13/oXRUsutv.jpg",
+        "./static/id/13/xunsghpr.jpg"
+    ]
+}, {
+    "id": 14,
+    "name": "Hallucination",
+    "type": "スタジオ",
+    "icon": "./static/id/14/PtSMFynl.jpg",
+    "thumbnail": "./static/id/14/PtSMFynl.jpg",
+    "datacenter": "Mana",
+    "world": "Pandaemonium",
+    "address": "シロガネ",
+    "hashtag": "空間スタジオ",
+    "owner": "Ruinen Fuchs",
+    "character": 19295598,
+    "regist": 1601389892,
+    "contact": "Twitter@Ruinen_F",
+    "comment": "遊郭空間兼スタジオ ... 見付けた方だけのお楽しみ空間の為、所在は伏せさせて頂きます。Twitterにヒントあり。",
+    "branches": [],
+    "opens": [{
+        "time": "00:00 - 24:00",
+        "dayofweek": "終日 (日中推奨)"
+    }],
+    "galleries": [
+        "./static/id/14/CYbqlNyg.jpg",
+        "./static/id/14/PtSMFynl.jpg",
+        "./static/id/14/TSM7wEyq.jpg",
+        "./static/id/14/YDhiDdLc.jpg"
+    ]
 }]
