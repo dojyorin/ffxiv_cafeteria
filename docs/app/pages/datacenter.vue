@@ -1,9 +1,9 @@
 <template>
 <v-container fluid>
     <v-row dense>
-        <template v-for="(cafe, i) in cafes">
+        <template v-for="(house, i) in houses">
             <v-col cols sm="6" md="4" :key="i">
-                <vue-thumbnail :cafe="cafe"></vue-thumbnail>
+                <vue-thumbnail :house="house"></vue-thumbnail>
             </v-col>
         </template>
     </v-row>
@@ -18,25 +18,25 @@ return {
 
     data(){
         return {
-            cafes: []
+            houses: []
         };
     },
 
     methods: {
-        async setCafes(ctx){
-            this.cafes.splice(0);
-            for(const cafe of (await $httpGet("./data/cafes.json", "json")).filter(({datacenter})=> datacenter.toLowerCase() === ctx)){
-                this.cafes.push(cafe);
+        async setHouses(ctx){
+            this.houses.splice(0);
+            for(const house of (await $httpGet("./data/houses.json", "json")).filter(({datacenter})=> datacenter.toLowerCase() === ctx)){
+                this.houses.push(house);
             }
         }
     },
 
     mounted(){
-        this.setCafes(this.$route.params.datacenter);
+        this.setHouses(this.$route.params.datacenter);
     },
 
     beforeRouteUpdate({params}, _, next){
-        this.setCafes(params.datacenter);
+        this.setHouses(params.datacenter);
         next();
     }
 };

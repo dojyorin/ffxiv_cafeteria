@@ -5,6 +5,10 @@
             <v-card>
                 <v-card-title>検索</v-card-title>
 
+                <v-card-text class="pb-0">
+                    ワールド名やエリア名を入力してみましょう。
+                </v-card-text>
+
                 <v-card-text>
                     <v-text-field clearable type="search" prepend-icon="mdi-database-search" label="検索ワード" @keydown.enter="({target})=> $router.push(`/search?words=${target.value}`)"></v-text-field>
                 </v-card-text>
@@ -12,12 +16,12 @@
         </v-col>
     </v-row>
 
-    <v-subheader>検索結果: {{cafes.length}} 件</v-subheader>
+    <v-subheader>検索結果: {{houses.length}} 件</v-subheader>
 
     <v-row dense>
-        <template v-for="(cafe, i) in cafes">
+        <template v-for="(house, i) in houses">
             <v-col cols sm="6" md="4" :key="i">
-                <vue-thumbnail :cafe="cafe"></vue-thumbnail>
+                <vue-thumbnail :house="house"></vue-thumbnail>
             </v-col>
         </template>
     </v-row>
@@ -32,17 +36,18 @@ return {
 
     data(){
         return {
-            cafes: []
+            houses: []
         };
     },
 
     methods: {
-        async searchCafes(query){
-            this.cafes.splice(0);
+        async searchHouses(query){
+            this.houses.splice(0);
 
-            const cafes = (await $httpGet("./data/cafes.json", "json")).filter((cafe)=>{
+            const hits = (await $httpGet("./data/houses.json", "json")).filter((house)=>{
                 const keys = [
                     "name",
+                    "type",
                     "datacenter",
                     "world",
                     "address",
@@ -51,21 +56,21 @@ return {
                     "comment"
                 ];
 
-                return keys.some(key => new RegExp(query || null, "i").test(cafe[key]));
+                return keys.some(key => new RegExp(query || null, "i").test(house[key]));
             });
 
-            for(const cafe of cafes){
-                this.cafes.push(cafe);
+            for(const house of hits){
+                this.houses.push(house);
             }
         }
     },
 
     mounted(){
-        this.searchCafes(this.$route.query.words);
+        this.searchHouses(this.$route.query.words);
     },
 
     beforeRouteUpdate({query}, _, next){
-        this.searchCafes(query.words);
+        this.searchHouses(query.words);
         next();
     }
 };

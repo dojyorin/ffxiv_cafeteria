@@ -1,5 +1,6 @@
 [{
     "id": 1,
+    "type": "バー",
     "name": "Bar Berry",
     "icon": "./static/id/1/Rwgq6URu.jpg",
     "thumbnail": "./static/id/1/Rwgq6URu.jpg",
@@ -29,6 +30,7 @@
 }, {
     "id": 2,
     "name": "秋の黄昏",
+    "type": "カフェ",
     "icon": "",
     "thumbnail": "",
     "datacenter": "Mana",
@@ -49,6 +51,7 @@
 }, {
     "id": 3,
     "name": "Cafe Vunchii",
+    "type": "カフェ",
     "icon": "",
     "thumbnail": "",
     "datacenter": "Mana",
@@ -69,6 +72,7 @@
 }, {
     "id": 4,
     "name": "Crystal Quartz",
+    "type": "バー",
     "icon": "",
     "thumbnail": "",
     "datacenter": "Mana",
@@ -89,6 +93,7 @@
 }, {
     "id": 5,
     "name": "胡蝶之夢",
+    "type": "カフェ",
     "icon": "./static/id/5/v8PzBIP2.jpg",
     "thumbnail": "./static/id/5/Nm60bFZy.jpg",
     "datacenter": "Mana",
@@ -114,6 +119,7 @@
 }, {
     "id": 6,
     "name": "WhiteHorse",
+    "type": "バー",
     "icon": "./static/id/6/8ARjmzmG.jpg",
     "thumbnail": "./static/id/6/8ARjmzmG.jpg",
     "datacenter": "Mana",
@@ -138,6 +144,7 @@
 }, {
     "id": 7,
     "name": "カフェ・HOA",
+    "type": "カフェ",
     "icon": "./static/id/7/6n8oL1PH.jpg",
     "thumbnail": "./static/id/7/6n8oL1PH.jpg",
     "datacenter": "Elemental",
