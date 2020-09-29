@@ -43,6 +43,7 @@ return {
             const cafes = (await $httpGet("./data/cafes.json", "json")).filter((cafe)=>{
                 const keys = [
                     "name",
+                    "datacenter",
                     "world",
                     "address",
                     "owner",

@@ -25,13 +25,13 @@
                 <v-card-title class="pb-0">新着店舗情報</v-card-title>
 
                 <v-list class="mx-4">
-                    <template v-for="(cafe, i) in cafes">
+                    <template v-for="(housing, i) in housings">
                         <v-divider v-if="i" :key="i"></v-divider>
-                        <v-list-item :key="i" :to="`/cafe/${cafe.id}`">
+                        <v-list-item :key="i" :to="`/id/${housing.id}`">
                             <v-list-item-content>
-                                <v-list-item-subtitle>{{$$unixDate(cafe.regist)}}</v-list-item-subtitle>
-                                <v-list-item-title class="override_title_noellipsis">{{cafe.name}}</v-list-item-title>
-                                <v-list-item-subtitle class="override_title_noellipsis">{{cafe.datacenter}} - {{cafe.world}}</v-list-item-subtitle>
+                                <v-list-item-subtitle>{{$$unixDate(housing.regist)}}</v-list-item-subtitle>
+                                <v-list-item-title class="override_title_noellipsis">{{housing.name}}</v-list-item-title>
+                                <v-list-item-subtitle class="override_title_noellipsis">{{housing.datacenter}} - {{housing.world}}</v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
                     </template>
@@ -47,7 +47,7 @@ return {
     data(){
         return {
             topics: [],
-            cafes: []
+            housings: []
         };
     },
 
@@ -58,11 +58,11 @@ return {
 
         this.topics.sort(({date:aRegist}, {date:bRegist})=> bRegist - aRegist).splice(10);
 
-        for(const cafe of await $httpGet("./data/cafes.json", "json")){
-            this.cafes.push(cafe);
+        for(const housing of await $httpGet("./data/database.json", "json")){
+            this.housings.push(housing);
         }
 
-        this.cafes.sort(({regist:aRegist}, {regist:bRegist})=> bRegist - aRegist).splice(10);
+        this.housing.sort(({regist:aRegist}, {regist:bRegist})=> bRegist - aRegist).splice(10);
     }
 }
 </script>

@@ -8,7 +8,7 @@ export const routes = {
     "/topics": "/topics.vue",
     "/search": "/search.vue",
     "/datacenter/:datacenter": "/datacenter.vue",
-    "/cafe/:id": "/cafe.vue"
+    "/id/:id": "/id.vue"
 };
 
 export default {

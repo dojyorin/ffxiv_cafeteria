@@ -1,5 +1,5 @@
 <template>
-<v-card :to="`/cafe/${cafe.id}`">
+<v-card :to="`/id/${cafe.id}`">
     <v-img height="250" :src="cafe.thumbnail">
         <template #placeholder>
             <v-row justify="center" align="center" class="fill-height">
