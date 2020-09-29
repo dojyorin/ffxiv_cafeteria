@@ -10,7 +10,7 @@
                 </v-card-text>
 
                 <v-card-text>
-                    <v-text-field clearable type="search" prepend-icon="mdi-database-search" label="検索ワード" @keydown.enter="({target})=> $router.push(`/search?words=${target.value}`)"></v-text-field>
+                    <v-text-field clearable type="search" prepend-icon="mdi-database-search" label="検索ワード" v-model="query" @keydown.enter="$router.push(`/search?words=${query}`)"></v-text-field>
                 </v-card-text>
             </v-card>
         </v-col>
@@ -36,12 +36,13 @@ return {
 
     data(){
         return {
+            query: "",
             houses: []
         };
     },
 
     methods: {
-        async searchHouses(query){
+        async searchHouses(){
             this.houses.splice(0);
 
             const hits = (await $httpGet("./data/houses.json", "json")).filter((house)=>{
@@ -56,7 +57,7 @@ return {
                     "comment"
                 ];
 
-                return keys.some(key => new RegExp(query || null, "i").test(house[key]));
+                return keys.some(key => new RegExp(this.query || null, "i").test(house[key]));
             });
 
             for(const house of hits){
@@ -66,11 +67,13 @@ return {
     },
 
     mounted(){
-        this.searchHouses(this.$route.query.words);
+        this.query = this.$route.query.words;
+        this.searchHouses();
     },
 
     beforeRouteUpdate({query}, _, next){
-        this.searchHouses(query.words);
+        this.query = query.words;
+        this.searchHouses();
         next();
     }
 };
