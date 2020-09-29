@@ -169,4 +169,31 @@
         "./static/id/7/MRVAbnFf.jpg",
         "./static/id/7/e2AGA0z9.jpg"
     ]
+}, {
+    "id": 8,
+    "name": "Mellifluous Lullaby",
+    "type": "カフェ",
+    "icon": "./static/id/8/BQn1Zanw.jpg",
+    "thumbnail": "./static/id/8/BQn1Zanw.jpg",
+    "datacenter": "Mana",
+    "world": "Hades",
+    "address": "ゴブレットビュート 19-12",
+    "hashtag": "MEL_FF14",
+    "owner": "Rimia Miller",
+    "character": 30067287,
+    "regist": 1601356134,
+    "contact": "Twitter@rimia_ff14",
+    "comment": "スタッフやお客様同士の雑談はもちろん、お友達や相方さんと素敵な思い出の一枚を撮りたい時にも是非♪",
+    "branches": [],
+    "opens": [{
+        "time": "21:00 - ??:??",
+        "dayofweek": "不定期"
+    }],
+    "galleries": [
+        "./static/id/8/BQn1Zanw.jpg",
+        "./static/id/8/1tw8qXoY.jpg",
+        "./static/id/8/c3RDk6el.jpg",
+        "./static/id/8/Nk6ITIzg.jpg",
+        "./static/id/8/w6xlyLMN.jpg"
+    ]
 }]
