@@ -344,11 +344,11 @@
     "character": 19295598,
     "regist": 1601389892,
     "contact": "Twitter@Ruinen_F",
-    "comment": "遊郭空間兼スタジオ ... 見付けた方だけのお楽しみ空間の為、所在は伏せさせて頂きます。Twitterにヒントあり。",
+    "comment": "遊郭空間兼スタジオ ... 日中推奨。",
     "branches": [],
     "opens": [{
         "time": "00:00 - 24:00",
-        "dayofweek": "終日 (日中推奨)"
+        "dayofweek": "終日"
     }],
     "galleries": [
         "./static/id/14/CYbqlNyg.jpg",
