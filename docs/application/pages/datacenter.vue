@@ -25,18 +25,22 @@ return {
     methods: {
         async setHouses(ctx){
             this.houses.splice(0);
-            for(const house of (await $httpGet("./data/houses.json", "json")).filter(({datacenter})=> datacenter.toLowerCase() === ctx)){
+
+            const houses = await $httpGet("./data/houses.json", "json");
+            const filter = houses.filter(({datacenter})=> datacenter.toLowerCase() === ctx);
+
+            for(const house of filter){
                 this.houses.push(house);
             }
         }
     },
 
-    mounted(){
-        this.setHouses(this.$route.params.datacenter);
+    async mounted(){
+        await this.setHouses(this.$route.params.datacenter);
     },
 
-    beforeRouteUpdate({params}, _, next){
-        this.setHouses(params.datacenter);
+    async beforeRouteUpdate({params}, _, next){
+        await this.setHouses(params.datacenter);
         next();
     }
 };

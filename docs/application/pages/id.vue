@@ -134,7 +134,8 @@ return {
 
     methods: {
         async setHouse(ctx){
-            const house = (await $httpGet("./data/houses.json", "json")).find(({id})=> id === Number(ctx));
+            const houses = await $httpGet("./data/houses.json", "json");
+            const house = houses.find(({id})=> id === Number(ctx));
 
             this.id = house.id;
             this.name = house.name;
@@ -167,12 +168,12 @@ return {
         }
     },
 
-    mounted(){
-        this.setHouse(this.$route.params.id);
+    async mounted(){
+        await this.setHouse(this.$route.params.id);
     },
 
-    beforeRouteUpdate({params}, _, next){
-        this.setHouse(params.id);
+    async beforeRouteUpdate({params}, _, next){
+        await this.setHouse(params.id);
         next();
     }
 };

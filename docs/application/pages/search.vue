@@ -45,8 +45,9 @@ return {
         async searchHouses(){
             this.houses.splice(0);
 
-            const hits = (await $httpGet("./data/houses.json", "json")).filter((house)=>{
-                const keys = [
+            const houses = await $httpGet("./data/houses.json", "json");
+            const filter = houses.filter((house)=>{
+                return [
                     "name",
                     "type",
                     "datacenter",
@@ -55,25 +56,23 @@ return {
                     "owner",
                     "hashtag",
                     "comment"
-                ];
-
-                return keys.some(key => new RegExp(this.query || null, "i").test(house[key]));
+                ].some(key => new RegExp(this.query || null, "i").test(house[key]));
             });
 
-            for(const house of hits){
+            for(const house of filter){
                 this.houses.push(house);
             }
         }
     },
 
-    mounted(){
+    async mounted(){
         this.query = this.$route.query.words;
-        this.searchHouses();
+        await this.searchHouses();
     },
 
-    beforeRouteUpdate({query}, _, next){
+    async beforeRouteUpdate({query}, _, next){
         this.query = query.words;
-        this.searchHouses();
+        await this.searchHouses();
         next();
     }
 };

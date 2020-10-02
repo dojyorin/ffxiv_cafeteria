@@ -38,7 +38,7 @@
 
         <template v-else>
             <v-img src="./static/background.jpg" :height="$vuetify.breakpoint.height - $vuetify.application.top">
-                <div class="fill-height bg_blur_image">
+                <div class="fill-height bg_blur_image" ref="pages">
                     <router-view></router-view>
                 </div>
             </v-img>
@@ -71,6 +71,12 @@ return {
                 icon: "mdi-map-search-outline"
             }]
         };
+    },
+
+    watch: {
+        "$route.path"(){
+            this.$refs.pages?.scroll(0, 0);
+        }
     }
 }
 </script>

@@ -52,17 +52,19 @@ return {
     },
 
     async mounted(){
-        for(const topic of await $httpGet("./data/topics.json", "json")){
+        const topics = await $httpGet("./data/topics.json", "json");
+        topics.sort(({date:aRegist}, {date:bRegist})=> bRegist - aRegist).splice(10);
+
+        for(const topic of topics){
             this.topics.push(topic);
         }
 
-        this.topics.sort(({date:aRegist}, {date:bRegist})=> bRegist - aRegist).splice(10);
+        const houses = await $httpGet("./data/houses.json", "json");
+        houses.sort(({regist:aRegist}, {regist:bRegist})=> bRegist - aRegist).splice(10);
 
-        for(const house of await $httpGet("./data/houses.json", "json")){
+        for(const house of houses){
             this.houses.push(house);
         }
-
-        this.houses.sort(({regist:aRegist}, {regist:bRegist})=> bRegist - aRegist).splice(10);
     }
 }
 </script>
