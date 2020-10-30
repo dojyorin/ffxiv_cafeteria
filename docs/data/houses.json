@@ -356,4 +356,30 @@
         "./static/id/14/TSM7wEyq.jpg",
         "./static/id/14/YDhiDdLc.jpg"
     ]
+}, {
+    "id": 15,
+    "name": "BAR-Asylum-",
+    "type": "バー",
+    "icon": "./static/id/15/vSgG0FD3.jpg",
+    "thumbnail": "./static/id/15/vSgG0FD3.jpg",
+    "datacenter": "Elemental",
+    "world": "Garuda",
+    "address": "ゴブレットビュート 20-9",
+    "hashtag": "バーアサイラム",
+    "owner": "Roze Heat",
+    "character": 25113265,
+    "regist": 1604022619,
+    "contact": "Twitter@roze_gurudaSAME",
+    "comment": "サメと禁酒法時代がテーマのバー、アサイラムです。地上階のカフェから地下への魚拓にタックルして入店お願いします。サメが好きな方、興味のある方の御来店お待ちしております！(最寄りエーテライト:ゴブレットビュート西)",
+    "branches": [],
+    "opens": [{
+        "time": "22:00 - ??:??",
+        "dayofweek": "木曜日"
+    }],
+    "galleries": [
+        "./static/id/15/6DLj2xUa.jpg",
+        "./static/id/15/io0FVEDh.jpg",
+        "./static/id/15/O63Hcil2.jpg",
+        "./static/id/15/vSgG0FD3.jpg"
+    ]
 }]
